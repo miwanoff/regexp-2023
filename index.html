@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let reg_all = /[^0-9]s/ig;
+        // let reg_one = /is/i;
+        // let s = 'THFS is a 2string';
+        // let matches_all = s.match(reg_all); // вернет массив из всех фрагментов, которые соответствуют шаблону
+        // let matches_one = s.match(reg_one); // вернет первый фрагмент, который соответствует шаблону
+        // if (matches_all)
+        //     console.log(matches_all); // IS,is 
+        // if (matches_one)
+        //     console.log(matches_one); // IS
+
+        let reg_this = /this/;
+        let reg_4 = /\s(book|this|ghdf)/g;
+        let s = ' this is a book ghdf bookbook bookbookbook bookdfdf';
+        if (reg_this.test(s)) {
+            let matches = s.match(reg_4);
+            if (matches) console.log(matches);//this,book 
+        }
+        else {
+            console.log("Error");
+        }
+    </script>
+</body>
+
+</html>
