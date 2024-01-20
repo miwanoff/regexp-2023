@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let login = /user: <mark>(.+?)<\/mark>/;
+        // let text = "user: <mark>Вася</mark>";
+        // let result = text.match(login);
+        // //alert(result[0] + " | " + result[1]); // user: <mark>Вася</mark> | Вася
+        // console.log(result);
+        // console.log(result[0]);
+        // console.log(result[1]);
+        let text = "user: <span>Вася<\/span> lorem ipsum user: <span>Валя<\/span>";
+        let login = /user: <span>(.*?)<\/span>/g;
+        let result = text.matchAll(login); // result - не массив, а перебираемый объект
+        let results = Array.from(result); // преобразовываем result в обычный массив
+        console.log(results);
+        for (let i = 0; i < results.length; i++) { // перебираем все полученные соответствия
+            alert(results[i][0] + " | " + results[i][1]); // нулевой элемент - все соответствие, первый - группировка
+        }
+    </script>
+</body>
+
+</html>

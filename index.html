@@ -20,7 +20,7 @@
         //     console.log(matches_one); // IS
 
         let reg_this = /this/;
-        let reg_4 = /\s(book|this|ghdf)/g;
+        let reg_4 = /\s\.(book|this|ghdf)/g;
         let s = ' this is a book ghdf bookbook bookbookbook bookdfdf';
         if (reg_this.test(s)) {
             let matches = s.match(reg_4);
