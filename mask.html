@@ -24,7 +24,7 @@
         // console.log(result[0]);
         // console.log(result[1]);
         let text = "user: <span>Вася<\/span> lorem ipsum user: <span>Валя<\/span>";
-        let login = /user: <span>(.*?)<\/span>/g;
+        let login = /(?:user): <span>(.*?)<\/span>/g;
         let result = text.matchAll(login); // result - не массив, а перебираемый объект
         let results = Array.from(result); // преобразовываем result в обычный массив
         console.log(results);
